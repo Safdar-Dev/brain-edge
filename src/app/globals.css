@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/Montserrat.ttf");
+}
+
+:root {
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background-color: #21201e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#f9d341 5%, #21201e);
+  border-radius: 18px;
+}
+
+/* Custom styles for Swiper */
+.testimonials-swiper {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(251, 191, 36, 0.3);
+  opacity: 1;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: rgb(251, 191, 36);
+}
+
+.testimonials-swiper .swiper-button-prev,
+.testimonials-swiper .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(251, 191, 36, 0.3);
+  border-radius: 50%;
+}
+
+.testimonials-swiper .swiper-button-prev:hover,
+.testimonials-swiper .swiper-button-next:hover {
+  background-color: rgba(251, 191, 36, 0.5);
+}
+
+.testimonials-swiper .swiper-button-prev::after,
+.testimonials-swiper .swiper-button-next::after {
+  font-size: 20px;
+}
+
+[data-overlay-container] {
+  height: 100%;
+}
+
+[data-drawer-content] {
+  touch-action: none;
+}
+
+[data-drawer-overlay] {
+  backdrop-filter: blur(4px);
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 1rem;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.div2 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.div3 {
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+.div4 {
+  grid-area: 1 / 4 / 2 / 6;
+}
+
+.div5 {
+  grid-area: 2 / 4 / 3 / 6;
+}
+
+.shadow-after-before::after {
+  content: "";
+  height: 100%;
+  width: 10rem;
+  background: linear-gradient(to left, #292826,#292826 30%, #0000);
+  position: absolute;
+  top: 0;
+  right: -10%;
+  z-index: 1;
+}
+
+.shadow-after-before::before {
+  content: "";
+  height: 100%;
+  width: 10rem;
+  background: linear-gradient(to right, #292826, #292826 30%, #0000);
+  position: absolute;
+  top: 0;
+  left: -10%;
+  z-index: 2;
+}
